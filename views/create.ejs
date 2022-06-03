@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="crete-blog">
+        <form action="/blogs" method="post">
+            <label for="tital">blog titale:</label>
+            <input autocomplete="off" name="title" placeholder="Title"  type="text" id="title" required>
+            <label for="sniped">blog shiped:</label>
+            <input autocomplete="off" name="snippet" placeholder="shipped" type="text" id="shiped" required>
+            <label for="body">blog body:</label>
+            <textarea  autocomplete="off" name="body" placeholder="enter the informtion" id="body" required></textarea>
+            <button>Submit</button>            
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

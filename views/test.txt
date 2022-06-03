@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: skyblue;
+            font-family: Verdana;
+            color: white;
+            padding: 30px;
+        }
+            
+    </style>
+
+</head>
+
+<body>
+    <h1>hello my new progam</h1>
+    <p>hello and most welcome to my new website</p>
+</body>
+
+</html>

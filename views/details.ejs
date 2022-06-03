@@ -1,0 +1,42 @@
+<html lang="en">
+<%- include('./partials/header.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+            <div class="details content">
+                <h2>
+                    <%=blog.title%>
+                </h2>
+                <div class="content">
+                    <p>
+                        <%=blog.body%>
+                    </p>
+                    <!-- <audio controls>
+                        <source src=" <%=blog.body%>" type="audio/ogg">
+                        <source src=" <%=blog.body%>" type="audio/mpeg">
+                      <!-- Your browser does not support the audio element. -->
+                      </audio> -->
+                </div>
+                <a class="delete" data-doc="<%-blog._id%>">
+                    <img src="/delete.svg" alt="delete icon">
+                </a>
+            </div>
+           
+                <script>
+                    const trashcan = document.querySelector('a.delete')
+                    trashcan.addEventListener('click', (e) => {
+                        const endpoint = `/blogs/${trashcan.dataset.doc}`;
+
+                        fetch(endpoint, {
+                            method: 'DELETE'
+                        })
+                            .then((responce) => responce.json())
+                            .then((data) => window.location.href = data.redirect)
+                            .catch(err => console.log(err));
+
+                    })
+                </script>
+                 <%- include ("./partials/footer.ejs")%>
+    </body>
+
+</html>
