@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
-app.post('/', (req, res) => {
+app.post('/blogs', (req, res) => {
     const blog = new Blog(req.body);
     blog.save()
         .then((result) => {
