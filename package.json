@@ -4,5 +4,23 @@
     "fs": "^0.0.1-security",
     "mongoose": "^6.3.3",
     "mysql": "^2.18.1"
-  }
+  },
+  "name": "bloag",
+  "version": "1.0.0",
+  "description": "this is bloag web app",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ujj9913/blogapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ujj9913/blogapp/issues"
+  },
+  "homepage": "https://github.com/Ujj9913/blogapp#readme"
 }

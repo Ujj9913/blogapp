@@ -3,10 +3,11 @@ const { render } = require('express/lib/response');
 var fs = require('fs')
 var app = express();
 var mongoose = require('mongoose');
+const port = process.env.PORT || 8000
 const Blog = require('./models/blog');
 const dbURI = "mongodb+srv://ujjval:123@cluster0.necyw.mongodb.net/node-tuts?retryWrites=true&w=majority";
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(result => app.listen(3000))
+    .then(result => app.listen(port))
     .catch(err => console.log(err));
 app.set('view engine', 'ejs');
 
